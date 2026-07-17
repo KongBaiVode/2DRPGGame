@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerWallJumpState : PlayerState
+public class Player2WallJumpState : Player2State
 {
-    public PlayerWallJumpState(Player _player, PlayerStateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
+    public Player2WallJumpState(Player2 _player, Player2StateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
     {
     }
 
@@ -14,7 +14,6 @@ public class PlayerWallJumpState : PlayerState
 
         stateTimer = 0.4f;
         player.SetVelocity(5 * -player.facingDir, player.jumpForce);
-        player.HandleFlip(-player.facingDir);
     }
 
     public override void Exit()

@@ -4,7 +4,7 @@ using Unity.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Player : Entity
+public class Player2 : Entity
 {   
     [Header("Attack details")]
     public Vector2[] attackMovement;
@@ -19,6 +19,7 @@ public class Player : Entity
     //玩家移动
     [Header("Move Info")]
     public float moveSpeed = 12f;
+    public float stopFriction; //急停时的摩擦力
     public float jumpForce;
 
     [Header("Dash Info")]
@@ -34,23 +35,24 @@ public class Player : Entity
 
     #region States 玩家状态
     //玩家状态机
-    public PlayerStateMachine stateMachine { get; private set; }
+    public Player2StateMachine stateMachine { get; private set; }
 
 
-    public PlayerIdleState idleState { get; private set; }
-    public PlayerMoveState moveState { get; private set; }
+    public Player2IdleState idleState { get; private set; }
+    //public Player2MoveState moveState { get; private set; }
+    public Player2RunStartState runStartState { get; private set; }
+    public Player2RunState runState { get; private set; }
+    public Player2RunStopState runStopState { get; private set; }
+    public Player2RunTurnState runTurnState { get; private set; }
 
-    public PlayerJumpState jumpState { get; private set; }
-    public PlayerAirState airState { get; private set; }
-    public PlayerWallSlideState wallSlide { get; private set; }
-    public PlayerWallJumpState wallJump { get; private set; }
-    public PlayerDashState dashState { get; private set; }
+    public Player2JumpState jumpState { get; private set; }
+    public Player2AirState airState { get; private set; }
+    public Player2WallSlideState wallSlide { get; private set; }
+    public Player2WallJumpState wallJump { get; private set; }
+    public Player2DashState dashState { get; private set; }
 
-    public PlayerPrimaryAttackState primaryAttack { get; private set; }
-    public PlayerCounterAttackState counterAttack { get; private set; }
-
-    public PlayerAimSwordState aimSwordState { get; private set; }
-    public PlayerCatchSwordState catchSwordState { get; private set; }
+    public Player2PrimaryAttackState primaryAttack { get; private set; }
+    public Player2CounterAttackState counterAttack { get; private set; }
 
 
     #endregion
@@ -62,21 +64,23 @@ public class Player : Entity
     {
         base.Awake();
 
-        stateMachine = new PlayerStateMachine();
+        stateMachine = new Player2StateMachine();
 
-        idleState = new PlayerIdleState(this, stateMachine, "Idle");
-        moveState = new PlayerMoveState(this, stateMachine, "Move");
-        jumpState = new PlayerJumpState(this, stateMachine, "Jump");
-        airState  = new PlayerAirState(this, stateMachine, "Jump");
-        wallSlide = new PlayerWallSlideState(this, stateMachine, "WallSlide");
-        wallJump  = new PlayerWallJumpState(this, stateMachine, "Jump");
-        dashState = new PlayerDashState(this, stateMachine, "Dash");
+        idleState = new Player2IdleState(this, stateMachine, "Idle");
+        //moveState = new Player2MoveState(this, stateMachine, "Move");
+        runStartState = new Player2RunStartState(this, stateMachine, "RunStart");
+        runState = new Player2RunState(this, stateMachine, "Run");
+        runStopState = new Player2RunStopState(this, stateMachine, "RunStop");
+        runTurnState = new Player2RunTurnState(this, stateMachine, "RunTurn");
+        jumpState = new Player2JumpState(this, stateMachine, "Jump");
+        airState  = new Player2AirState(this, stateMachine, "Jump");
+        wallSlide = new Player2WallSlideState(this, stateMachine, "WallSlide");
+        wallJump  = new Player2WallJumpState(this, stateMachine, "Jump");
+        dashState = new Player2DashState(this, stateMachine, "Dash");
 
-        primaryAttack = new PlayerPrimaryAttackState(this, stateMachine, "Attack");
-        counterAttack = new PlayerCounterAttackState(this, stateMachine, "CounterAttack");
+        primaryAttack = new Player2PrimaryAttackState(this, stateMachine, "Attack");
+        counterAttack = new Player2CounterAttackState(this, stateMachine, "CounterAttack");
 
-        aimSwordState = new PlayerAimSwordState(this, stateMachine, "AimSword");
-        catchSwordState = new PlayerCatchSwordState(this, stateMachine, "CatchSword");
     }
 
     protected override void Start()
@@ -131,5 +135,13 @@ public class Player : Entity
 
             stateMachine.ChangeState(dashState);
         }
+    }
+
+    //RunStop状态调用的急停函数
+    public void ApplyStopFriction()
+    {
+        // 急停时，让水平速度以插值方式滑行衰减至0
+        float newX = Mathf.MoveTowards(rb.velocity.x, 0, stopFriction * Time.deltaTime * 100);
+        rb.velocity = new Vector2(newX, rb.velocity.y);
     }
 }

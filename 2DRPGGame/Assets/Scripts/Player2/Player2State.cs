@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class PlayerState
+public abstract class Player2State
 {
-    protected PlayerStateMachine stateMachine;
-    protected Player player;
+    protected Player2StateMachine stateMachine;
+    protected Player2 player;
 
     protected Rigidbody2D rb;
     protected Animator animator;
@@ -22,7 +22,7 @@ public abstract class PlayerState
     protected bool triggerCalled;
 
 
-    public PlayerState(Player _player, PlayerStateMachine _stateMachine, string _animBoolName)
+    public Player2State(Player2 _player, Player2StateMachine _stateMachine, string _animBoolName)
     {
         this.stateMachine = _stateMachine;
         this.player = _player;
@@ -35,6 +35,9 @@ public abstract class PlayerState
     //进入状态
     public virtual void Enter()
     {
+        // 【核心修复】：确保 Enter 的一瞬间，局部 xInput 就拿到了当帧最真实的值，摆脱 0 的命运
+        xInput = Input.GetAxisRaw("Horizontal");
+
         //设置动画参数
         animator.SetBool(animBoolName, true);
 

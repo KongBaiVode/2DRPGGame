@@ -38,14 +38,13 @@ public class Entity : MonoBehaviour
 
     protected virtual void Awake()
     {
-        
+        animator = GetComponentInChildren<Animator>(); //要先得到Animator，再创建StateMachine，然后再创建各种State，否则会报错
+        rb = GetComponent<Rigidbody2D>();
     }
 
     protected virtual void Start()
     {
         fx = GetComponent<EntityFX>();
-        animator = GetComponentInChildren<Animator>();
-        rb = GetComponent<Rigidbody2D>();
     }
 
     protected virtual void Update()
@@ -89,7 +88,7 @@ public class Entity : MonoBehaviour
             return;
 
         rb.velocity = new Vector2(_xVelocity, _yVelocity);
-        FlipController(_xVelocity);
+        // HandleFlip(_xVelocity);
     }
     #endregion
 
@@ -118,11 +117,11 @@ public class Entity : MonoBehaviour
         this.transform.Rotate(0, 180, 0);
     }
 
-    public virtual void FlipController(float _x)
+    public virtual void HandleFlip(float _xVelocity)
     {
-        if(_x > 0 && !facingRight)
+        if(_xVelocity > 0 && !facingRight)
             Flip();
-        else if(_x < 0 && facingRight)
+        else if(_xVelocity < 0 && facingRight)
             Flip();
     }
     #endregion

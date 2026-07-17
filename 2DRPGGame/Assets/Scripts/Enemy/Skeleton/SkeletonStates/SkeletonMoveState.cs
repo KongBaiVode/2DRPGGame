@@ -24,6 +24,7 @@ public class SkeletonMoveState : SkeletonGroundState
         base.Update();
 
         enemy.SetVelocity( enemy.moveSpeed * enemy.facingDir, rb.velocity.y);
+        enemy.HandleFlip(enemy.moveSpeed * enemy.facingDir);
 
         if(enemy.IsWallDetected() || !enemy.IsGroundDetected())
         {

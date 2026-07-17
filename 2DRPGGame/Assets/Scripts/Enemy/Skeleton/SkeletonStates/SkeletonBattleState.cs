@@ -47,6 +47,7 @@ public class SkeletonBattleState : EnemyState
             moveDir = -1;
 
         enemy.SetVelocity(enemy.moveSpeed * moveDir, rb.velocity.y);
+        enemy.HandleFlip(enemy.moveSpeed * moveDir);
     }
 
     public override void Exit()

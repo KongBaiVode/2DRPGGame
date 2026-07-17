@@ -2,15 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMoveState : PlayerGroundedState
+public class Player2RunStartState : Player2State
 {
-    public PlayerMoveState(Player _player, PlayerStateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
+    public Player2RunStartState(Player2 _player, Player2StateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
     {
     }
 
     public override void Enter()
     {
         base.Enter();
+        player.HandleFlip(xInput);
     }
 
     public override void Exit()
@@ -23,9 +24,11 @@ public class PlayerMoveState : PlayerGroundedState
         base.Update();
 
         player.SetVelocity(xInput * player.moveSpeed, rb.velocity.y);
-        player.HandleFlip(xInput);
 
         if(xInput == 0)
-            stateMachine.ChangeState(player.idleState);
+            stateMachine.ChangeState(player.runStopState);
+
+        if(triggerCalled)
+            stateMachine.ChangeState(player.runState);
     }
 }

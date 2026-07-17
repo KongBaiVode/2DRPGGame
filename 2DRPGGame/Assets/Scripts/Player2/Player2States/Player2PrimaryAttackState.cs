@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerPrimaryAttackState : PlayerState
+public class Player2PrimaryAttackState : Player2State
 {   
     //当前连招的标号
     private int comboCounter;
@@ -12,7 +12,7 @@ public class PlayerPrimaryAttackState : PlayerState
     //可连招窗口，该时间段结束后，下一次攻击会重置为第一段攻击
     private float comboWindow = 2f;
 
-    public PlayerPrimaryAttackState(Player _player, PlayerStateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
+    public Player2PrimaryAttackState(Player2 _player, Player2StateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
     {
     }
 
