@@ -151,7 +151,7 @@ Transform:
   m_GameObject: {fileID: 39839022}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.73, y: -3.53, z: 0}
+  m_LocalPosition: {x: 5.07, y: -0.54, z: 0}
   m_LocalScale: {x: 1.4, y: 1.4, z: 1.4}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -350,7 +350,7 @@ Transform:
   m_GameObject: {fileID: 57144961}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.0852077, y: 2.545227, z: -9.972786}
+  m_LocalPosition: {x: -10.455048, y: 2.545227, z: -9.972786}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -942,7 +942,7 @@ Transform:
   m_GameObject: {fileID: 333046357}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.68, y: -0.59, z: 0}
+  m_LocalPosition: {x: -6.13, y: 1.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1183,7 +1183,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.0852077, y: 2.545227, z: -9.972786}
+  m_LocalPosition: {x: -10.455048, y: 2.545227, z: -9.972786}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1458,6 +1458,7 @@ GameObject:
   - component: {fileID: 1165975763}
   - component: {fileID: 1165975765}
   - component: {fileID: 1165975764}
+  - component: {fileID: 1165975766}
   m_Layer: 0
   m_Name: SkillManager
   m_TagString: Untagged
@@ -1474,7 +1475,7 @@ Transform:
   m_GameObject: {fileID: 1165975762}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.765208, y: -0.64522696, z: -0.027214382}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1505,6 +1506,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45ca043a3b750944386d988bb07c258b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1165975766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165975762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be99a674d5f108e4a9e9cce30642bd5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 0
+  clonePrefab: {fileID: 8956292081503890025, guid: 29384c152d92e11409c11f7318051913, type: 3}
+  cloneDuration: 1.5
+  canAttack: 1
 --- !u!1 &1195879054
 GameObject:
   m_ObjectHideFlags: 0
@@ -5352,7 +5369,7 @@ Transform:
   m_GameObject: {fileID: 1515604359}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.765208, y: -0.64522696, z: -0.027214382}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

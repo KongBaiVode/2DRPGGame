@@ -12,6 +12,10 @@ public class PlayerDashState : PlayerState
     {
         base.Enter();
 
+        //克隆一个分身，在Dash时的位置处
+        //SkillManager.Instance.clone.CreateClone(player.transform);
+        player.skill.clone.CreateClone(player.transform);
+
         stateTimer = player.dashDuration;
     }
 
