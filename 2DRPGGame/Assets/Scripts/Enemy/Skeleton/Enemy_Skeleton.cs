@@ -30,6 +30,7 @@ public class Enemy_Skeleton : Enemy
         base.Start();
 
         stateMachine.InitLiaize(idleState);
+
     }
 
     protected override void Update()

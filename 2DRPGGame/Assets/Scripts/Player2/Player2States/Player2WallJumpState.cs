@@ -28,7 +28,7 @@ public class Player2WallJumpState : Player2State
         if(stateTimer < 0)
             stateMachine.ChangeState(player.fallState);
 
-        if(player.IsGroundDetected())
+        if(player.groundDetected)
             stateMachine.ChangeState(player.idleState);
     }
 }

@@ -31,11 +31,11 @@ public class PlayerGroundedState : PlayerState
             stateMachine.ChangeState(player.primaryAttack);
 
         //检测不到地面，进入空中状态
-        if(!player.IsGroundDetected())
+        if(!player.groundDetected)
             stateMachine.ChangeState(player.airState);
 
         //点击跳跃键，进入跳跃状态
-        if(Input.GetKeyDown(KeyCode.Space) && player.IsGroundDetected())
+        if(Input.GetKeyDown(KeyCode.Space) && player.groundDetected)
             stateMachine.ChangeState(player.jumpState);
     }
 }

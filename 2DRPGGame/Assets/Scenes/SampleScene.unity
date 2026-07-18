@@ -806,7 +806,7 @@ GameObject:
   - component: {fileID: 322915976}
   - component: {fileID: 322915975}
   - component: {fileID: 322915977}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Animator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5434,7 +5434,7 @@ GameObject:
   - component: {fileID: 1702398390}
   - component: {fileID: 1702398389}
   - component: {fileID: 1702398394}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5571,6 +5571,7 @@ MonoBehaviour:
   isBusy: 0
   moveSpeed: 8
   inAirMoveMultiplier: 0.7
+  wallSlideMultiplier: 0.7
   stopFriction: 0.5
   jumpForce: 14
   isDoubleJumped: 0

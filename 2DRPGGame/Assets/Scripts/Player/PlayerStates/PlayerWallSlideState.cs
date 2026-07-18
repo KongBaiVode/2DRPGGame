@@ -33,10 +33,10 @@ public class PlayerWallSlideState : PlayerState
         else
             rb.velocity = new Vector2(0, rb.velocity.y * 0.7f);
 
-        if((xInput != 0 && player.facingDir != xInput) || !player.IsWallDetected()) //这里添加!player.IsWallDetected()判断是解决在玩家在AirState状态下碰到墙壁的瞬间按反方向的移动键后玩家的滑墙方向改变的Bug
+        if((xInput != 0 && player.facingDir != xInput) || !player.wallDetected) //这里添加!player.wallDetected判断是解决在玩家在AirState状态下碰到墙壁的瞬间按反方向的移动键后玩家的滑墙方向改变的Bug
             stateMachine.ChangeState(player.idleState);//这里切换回idleState是因为idleState状态是万能的，可以转变为许多其他状态，比如airState
         
-        if(player.IsGroundDetected())
+        if(player.groundDetected)
             stateMachine.ChangeState(player.idleState);
     }
 }

@@ -26,9 +26,11 @@ public class Entity : MonoBehaviour
     public int attackNum = 0;
     [SerializeField] protected Transform groundCheck;
     [SerializeField] protected float groundCheckDistance;
+    public bool groundDetected { get; private set; }
     [SerializeField] protected Transform wallCheck;
     [SerializeField] protected float wallCheckDistance;
     [SerializeField] protected LayerMask whatIsGround;
+    public bool wallDetected { get; private set; }
 
 
     //玩家、敌人朝向
@@ -49,7 +51,8 @@ public class Entity : MonoBehaviour
 
     protected virtual void Update()
     {
-        
+        IsGroundDetected();
+        IsWallDetected();
     }
 
     public void Damage(int _facingDir)
@@ -95,10 +98,16 @@ public class Entity : MonoBehaviour
 
     #region Collision
     //地面检测
-    public virtual bool IsGroundDetected() => Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, whatIsGround);
+    public virtual void IsGroundDetected()
+    {
+        groundDetected = Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, whatIsGround);
+    }
     //public bool IsGroundDetected() => Physics2D.OverlapCircle(groundCheck.position, groundCheckDistance, whatIsGround);
     //墙体检测
-    public virtual bool IsWallDetected() => Physics2D.Raycast(wallCheck.position, Vector2.right * facingDir, wallCheckDistance, whatIsGround);
+    public virtual void IsWallDetected()
+    {
+        wallDetected = Physics2D.Raycast(wallCheck.position, Vector2.right * facingDir, wallCheckDistance, whatIsGround);
+    }
 
     protected virtual void OnDrawGizmos()
     {

@@ -22,8 +22,6 @@ public class Player2FallState : Player2AirState
     {
         base.Update();
 
-        if(player.IsWallDetected())
-            stateMachine.ChangeState(player.wallSlide);
 
         // 在下落期间，如果还没二段跳，依然允许触发二段跳
         if (Input.GetKeyDown(KeyCode.Space) && !player.isDoubleJumped)
@@ -33,7 +31,7 @@ public class Player2FallState : Player2AirState
         }
 
         // 落地分流拦截：检测是否踩到地面
-        if (player.IsGroundDetected() && rb.velocity.y <= 0.1f)
+        if (player.groundDetected && rb.velocity.y <= 0.1f)
         {
             if (player.isDoubleJumped && xInput != 0)
             {
@@ -47,8 +45,10 @@ public class Player2FallState : Player2AirState
             }
         }
 
+        if(player.wallDetected)
+            stateMachine.ChangeState(player.wallSlide);
 
-        // if(player.IsGroundDetected())
+        // if(player.groundDetected)
         //     stateMachine.ChangeState(player.idleState);
     }
 }

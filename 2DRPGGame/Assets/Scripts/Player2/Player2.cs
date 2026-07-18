@@ -21,6 +21,8 @@ public class Player2 : Entity
     public float moveSpeed = 12f;
     [Range(0, 1)]
     public float inAirMoveMultiplier = 0.7f;
+    [Range(0, 1)]
+    public float wallSlideMultiplier = 0.7f;
     public float stopFriction; //急停时的摩擦力
     public float jumpForce;
     [HideInInspector] public bool isDoubleJumped; // 记录当前是否已经二段跳
@@ -42,7 +44,7 @@ public class Player2 : Entity
 
 
     public Player2IdleState idleState { get; private set; }
-    //public Player2MoveState moveState { get; private set; }
+    
     public Player2RunStartState runStartState { get; private set; }
     public Player2RunState runState { get; private set; }
     public Player2RunStopState runStopState { get; private set; }
@@ -52,8 +54,8 @@ public class Player2 : Entity
     public Player2Jump2State jump2State { get; private set; }
     public Player2Land1State land1State { get; private set; }
     public Player2Land2State land2State { get; private set; }
-
     public Player2FallState fallState { get; private set; }
+
     public Player2WallSlideState wallSlide { get; private set; }
     public Player2WallJumpState wallJump { get; private set; }
     public Player2DashState dashState { get; private set; }
@@ -132,7 +134,7 @@ public class Player2 : Entity
         //dashUsageTime -= Time.deltaTime;
 
         // //玩家面向墙壁时无法Dash
-        // if(IsWallDetected())
+        // if(wallDetected)
         //     return;
 
         //if (Input.GetKeyDown(KeyCode.LeftShift) && dashUsageTime < 0)

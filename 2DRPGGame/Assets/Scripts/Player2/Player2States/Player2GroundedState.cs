@@ -31,12 +31,12 @@ public class Player2GroundedState : Player2State
             stateMachine.ChangeState(player.primaryAttack);
 
         //检测不到地面，进入空中状态
-        //if(!player.IsGroundDetected())
-        if(rb.velocity.y < 0)
+        if(!player.groundDetected)
+        //if(rb.velocity.y < 0)
             stateMachine.ChangeState(player.fallState);
 
         //点击跳跃键，进入跳跃状态
-        if(Input.GetKeyDown(KeyCode.Space) && player.IsGroundDetected())
+        if(Input.GetKeyDown(KeyCode.Space) && player.groundDetected)
             stateMachine.ChangeState(player.jump1State);
     }
 }

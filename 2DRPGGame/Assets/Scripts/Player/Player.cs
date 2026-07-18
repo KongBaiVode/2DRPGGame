@@ -116,7 +116,7 @@ public class Player : Entity
         //dashUsageTime -= Time.deltaTime;
 
         // //玩家面向墙壁时无法Dash
-        // if(IsWallDetected())
+        // if(wallDetected)
         //     return;
 
         //if (Input.GetKeyDown(KeyCode.LeftShift) && dashUsageTime < 0)
