@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player2RunStopState : Player2State
+public class Player2RunStopState : Player2GroundedState
 {
     public Player2RunStopState(Player2 _player, Player2StateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
     {
@@ -34,7 +34,7 @@ public class Player2RunStopState : Player2State
                 // // 立刻拦截，改道送去转身状态！
                 // stateMachine.ChangeState(player.runTurnState);
                 
-                // 【核心修复】：检查当前玩家的绝对速度是否大于最大速度的 35% (阈值可自行调优)
+                // 核心修复：检查当前玩家的绝对速度是否大于最大速度的 35% (阈值可自行调优)
                 // 注：如果你的 rb 在 player 脚本里，请写 player.rb.velocity.x
                 if (Mathf.Abs(player.rb.velocity.x) > player.moveSpeed * 0.35f)
                 {

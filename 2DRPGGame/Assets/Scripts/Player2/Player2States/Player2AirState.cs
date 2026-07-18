@@ -22,15 +22,9 @@ public class Player2AirState : Player2State
     {
         base.Update();
 
-        if(player.IsWallDetected())
-            stateMachine.ChangeState(player.wallSlide);
-
-        if(player.IsGroundDetected())
-            stateMachine.ChangeState(player.idleState);
-
         if(xInput != 0)
         {
-            player.SetVelocity(player.moveSpeed * 0.8f * xInput, rb.velocity.y);
+            player.SetVelocity(xInput * player.moveSpeed * player.inAirMoveMultiplier, rb.velocity.y);
             player.HandleFlip(xInput);
         }
     }

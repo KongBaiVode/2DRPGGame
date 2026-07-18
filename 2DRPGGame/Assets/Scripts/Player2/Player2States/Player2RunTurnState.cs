@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player2RunTurnState : Player2State
+public class Player2RunTurnState : Player2GroundedState
 {
     private float targetDirection; // 记录玩家想转向的新方向
 

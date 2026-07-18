@@ -5464,7 +5464,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 1702398388}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: e2492799161528d4ea176bc3a14bec4b, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -5506,7 +5506,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 3.5
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e2492799161528d4ea176bc3a14bec4b, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -5570,8 +5570,10 @@ MonoBehaviour:
   counterAttackDuration: 0.2
   isBusy: 0
   moveSpeed: 8
-  stopFriction: 0.3
-  jumpForce: 12
+  inAirMoveMultiplier: 0.7
+  stopFriction: 0.5
+  jumpForce: 14
+  isDoubleJumped: 0
   dashSpeed: 25
   dashDuration: 0.2
 --- !u!1 &1799589165

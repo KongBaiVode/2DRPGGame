@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player2RunStartState : Player2State
+public class Player2RunStartState : Player2GroundedState
 {
     public Player2RunStartState(Player2 _player, Player2StateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
     {
