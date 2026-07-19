@@ -26,6 +26,7 @@ public class Player2 : Entity
     public float stopFriction; //急停时的摩擦力
     public float jumpForce;
     [HideInInspector] public bool isDoubleJumped; // 记录当前是否已经二段跳
+    public Vector2 wallJumpForce;
 
     [Header("Dash Info")]
     public float dashSpeed;
@@ -50,14 +51,16 @@ public class Player2 : Entity
     public Player2RunStopState runStopState { get; private set; }
     public Player2RunTurnState runTurnState { get; private set; }
 
+    public Player2Jump1StartState jump1StartState { get; private set; }
     public Player2Jump1State jump1State { get; private set; }
     public Player2Jump2State jump2State { get; private set; }
     public Player2Land1State land1State { get; private set; }
     public Player2Land2State land2State { get; private set; }
     public Player2FallState fallState { get; private set; }
 
-    public Player2WallSlideState wallSlide { get; private set; }
-    public Player2WallJumpState wallJump { get; private set; }
+    public Player2WallSlideState wallSlideState { get; private set; }
+    public Player2WallJumpStartState wallJumpStartState { get; private set; }
+    public Player2WallJumpState wallJumpState { get; private set; }
     public Player2DashState dashState { get; private set; }
 
     public Player2PrimaryAttackState primaryAttack { get; private set; }
@@ -82,14 +85,16 @@ public class Player2 : Entity
         runStopState = new Player2RunStopState(this, stateMachine, "RunStop");
         runTurnState = new Player2RunTurnState(this, stateMachine, "RunTurn");
 
+        jump1StartState = new Player2Jump1StartState(this, stateMachine, "Jump1Start");
         jump1State = new Player2Jump1State(this, stateMachine, "Jump1");
         jump2State = new Player2Jump2State(this, stateMachine, "Jump2");
         land1State = new Player2Land1State(this, stateMachine, "Land1");
         land2State = new Player2Land2State(this, stateMachine, "Land2");
         fallState  = new Player2FallState(this, stateMachine, "Jump1");
 
-        wallSlide = new Player2WallSlideState(this, stateMachine, "WallSlide");
-        wallJump  = new Player2WallJumpState(this, stateMachine, "Jump");
+        wallSlideState = new Player2WallSlideState(this, stateMachine, "WallSlide");
+        wallJumpStartState = new Player2WallJumpStartState(this, stateMachine, "WallJumpStart");
+        wallJumpState  = new Player2WallJumpState(this, stateMachine, "WallJump");
         dashState = new Player2DashState(this, stateMachine, "Dash");
 
         primaryAttack = new Player2PrimaryAttackState(this, stateMachine, "Attack");

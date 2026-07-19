@@ -37,6 +37,6 @@ public class Player2GroundedState : Player2State
 
         //点击跳跃键，进入跳跃状态
         if(Input.GetKeyDown(KeyCode.Space) && player.groundDetected)
-            stateMachine.ChangeState(player.jump1State);
+            stateMachine.ChangeState(player.jump1StartState);
     }
 }

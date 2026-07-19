@@ -31,7 +31,7 @@ public class Player2DashState : Player2State
         base.Update();
 
         if(!player.groundDetected && player.wallDetected)
-            stateMachine.ChangeState(player.wallSlide);
+            stateMachine.ChangeState(player.wallSlideState);
 
         player.SetVelocity(player.dashSpeed * player.dashDir, 0);
         player.HandleFlip(player.dashDir);
