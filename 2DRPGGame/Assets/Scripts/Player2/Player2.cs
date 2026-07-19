@@ -32,7 +32,7 @@ public class Player2 : Entity
     public float dashSpeed;
     //Dash的持续时间
     public float dashDuration;
-    public float dashDir { get; private set; }
+    public float dashDir;
 
 
     public SkillManager skill { get; private set; }
@@ -61,6 +61,7 @@ public class Player2 : Entity
     public Player2WallSlideState wallSlideState { get; private set; }
     public Player2WallJumpStartState wallJumpStartState { get; private set; }
     public Player2WallJumpState wallJumpState { get; private set; }
+
     public Player2DashState dashState { get; private set; }
 
     public Player2PrimaryAttackState primaryAttack { get; private set; }
@@ -78,8 +79,9 @@ public class Player2 : Entity
 
         stateMachine = new Player2StateMachine();
 
+
         idleState = new Player2IdleState(this, stateMachine, "Idle");
-        //moveState = new Player2MoveState(this, stateMachine, "Move");
+
         runStartState = new Player2RunStartState(this, stateMachine, "RunStart");
         runState = new Player2RunState(this, stateMachine, "Run");
         runStopState = new Player2RunStopState(this, stateMachine, "RunStop");
@@ -95,6 +97,7 @@ public class Player2 : Entity
         wallSlideState = new Player2WallSlideState(this, stateMachine, "WallSlide");
         wallJumpStartState = new Player2WallJumpStartState(this, stateMachine, "WallJumpStart");
         wallJumpState  = new Player2WallJumpState(this, stateMachine, "WallJump");
+
         dashState = new Player2DashState(this, stateMachine, "Dash");
 
         primaryAttack = new Player2PrimaryAttackState(this, stateMachine, "Attack");
@@ -117,7 +120,7 @@ public class Player2 : Entity
 
         stateMachine.UpdateActiveState();
 
-        CheckForDashInput();
+        //CheckForDashInput();
     }
 
     public IEnumerator BusyFor(float _second)
@@ -134,27 +137,27 @@ public class Player2 : Entity
     //状态结束后动画事件触发。这样写可以让其他函数调用玩家组件中的这个方法，且可以获得对应状态的该虚方法的实例
     public void AnimationTrigger() => stateMachine.currentState.AnimationFinishTrigger();
 
-    private void CheckForDashInput()
-    {
-        //dashUsageTime -= Time.deltaTime;
+    // private void CheckForDashInput()
+    // {
+    //     //dashUsageTime -= Time.deltaTime;
 
-        // //玩家面向墙壁时无法Dash
-        // if(wallDetected)
-        //     return;
+    //     // //玩家面向墙壁时无法Dash
+    //     // if(wallDetected)
+    //     //     return;
 
-        //if (Input.GetKeyDown(KeyCode.LeftShift) && dashUsageTime < 0)
-        if (Input.GetKeyDown(KeyCode.LeftShift) && SkillManager.Instance.dash.CanUseSkill())
-        {
-            //dashUsageTime = dashCooldownTime;
+    //     //if (Input.GetKeyDown(KeyCode.LeftShift) && dashUsageTime < 0)
+    //     if (Input.GetKeyDown(KeyCode.LeftShift) && SkillManager.Instance.dash.CanUseSkill())
+    //     {
+    //         //dashUsageTime = dashCooldownTime;
 
-            dashDir = Input.GetAxisRaw("Horizontal");
+    //         dashDir = Input.GetAxisRaw("Horizontal");
 
-            if(dashDir == 0)
-                dashDir = facingDir;
+    //         if(dashDir == 0)
+    //             dashDir = facingDir;
 
-            stateMachine.ChangeState(dashState);
-        }
-    }
+    //         stateMachine.ChangeState(dashState);
+    //     }
+    // }
 
     //RunStop状态调用的急停函数
     public void ApplyStopFriction()

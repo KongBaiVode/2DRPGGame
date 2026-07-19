@@ -31,6 +31,9 @@ public class Player2RunTurnState : Player2GroundedState
         // 2. 手感优化：如果转身中途玩家突然又松开了按键，直接进急停
         if (xInput == 0)
         {
+            // 正式翻转图片朝向
+            player.HandleFlip(xInput);
+
             stateMachine.ChangeState(player.runStopState);
             return;
         }

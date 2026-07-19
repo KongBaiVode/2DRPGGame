@@ -54,6 +54,18 @@ public abstract class Player2State
 
         //设置动画参数
         animator.SetFloat("yVelocity", rb.velocity.y);
+
+
+        //Dash状态应该可以从任何状态转换过来，所以在这里写检测Dash的输入
+        if (Input.GetKeyDown(KeyCode.LeftShift) && CanDash())
+        {
+            player.dashDir = xInput;
+
+            if(xInput == 0)
+                player.dashDir = player.facingDir;
+            
+            stateMachine.ChangeState(player.dashState);
+        }
     }
 
     //退出状态
@@ -66,5 +78,17 @@ public abstract class Player2State
     public virtual void AnimationFinishTrigger()
     {
         triggerCalled = true;
+    }
+
+    private bool CanDash()
+    {
+        if(player.wallDetected)
+            return false;
+
+        if(stateMachine.currentState == player.dashState)
+            return false;
+
+
+        return true;
     }
 }
