@@ -7,7 +7,8 @@ using UnityEngine;
 public class Player2 : Entity
 {   
     [Header("Attack details")]
-    public Vector2[] attackMovement;
+    public Vector2 attackVelocity;
+    public float attackVelocityDuration = 0.1f;
     //我们还可以像冲刺一样维护一个attackDir，然后在GroundState中替换掉attack输入，这样我们就可以在攻击时改变攻击方向
     //玩家反击持续时间
     public float counterAttackDuration = 0.2f;
@@ -64,7 +65,7 @@ public class Player2 : Entity
 
     public Player2DashState dashState { get; private set; }
 
-    public Player2PrimaryAttackState primaryAttack { get; private set; }
+    public Player2BasicAttackState basicAttackState { get; private set; }
     public Player2CounterAttackState counterAttack { get; private set; }
 
 
@@ -100,7 +101,7 @@ public class Player2 : Entity
 
         dashState = new Player2DashState(this, stateMachine, "Dash");
 
-        primaryAttack = new Player2PrimaryAttackState(this, stateMachine, "Attack");
+        basicAttackState = new Player2BasicAttackState(this, stateMachine, "BasicAttack");
         counterAttack = new Player2CounterAttackState(this, stateMachine, "CounterAttack");
 
     }
@@ -135,7 +136,7 @@ public class Player2 : Entity
     }
 
     //状态结束后动画事件触发。这样写可以让其他函数调用玩家组件中的这个方法，且可以获得对应状态的该虚方法的实例
-    public void AnimationTrigger() => stateMachine.currentState.AnimationFinishTrigger();
+    public void CallAnimationTrigger() => stateMachine.currentState.CallAnimationTrigger();
 
     // private void CheckForDashInput()
     // {

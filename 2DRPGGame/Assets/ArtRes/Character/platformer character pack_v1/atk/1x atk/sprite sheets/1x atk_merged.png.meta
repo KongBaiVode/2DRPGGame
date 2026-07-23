@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -108,7 +108,364 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: 1x atk_merged_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 160
+        height: 64
+      alignment: 9
+      pivot: {x: 0.85, y: 0.47}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7543ae18eaeb154a982b8371c8725b3
+      internalID: -1865079683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1x atk_merged_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 256
+        width: 160
+        height: 64
+      alignment: 9
+      pivot: {x: 0.85, y: 0.47}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75172d186a07a7844860cebb8ad67b75
+      internalID: 205371937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1x atk_merged_2
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 256
+        width: 160
+        height: 64
+      alignment: 9
+      pivot: {x: 0.85, y: 0.47}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8daa7f9fc4fc6d6449113328272759f0
+      internalID: -1166942846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1x atk_merged_3
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 256
+        width: 160
+        height: 64
+      alignment: 9
+      pivot: {x: 0.85, y: 0.47}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b157bffe23d2bf40908ebc176bf48d8
+      internalID: 399910541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1x atk_merged_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 160
+        height: 64
+      alignment: 9
+      pivot: {x: 0.85, y: 0.47}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdb9631fe05f99e46aa91b9a2ca0985a
+      internalID: 1020493998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1x atk_merged_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 192
+        width: 160
+        height: 64
+      alignment: 9
+      pivot: {x: 0.85, y: 0.47}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a76c35eeb83175547a8224aafcc0901d
+      internalID: -1543077739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1x atk_merged_6
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 192
+        width: 160
+        height: 64
+      alignment: 9
+      pivot: {x: 0.85, y: 0.47}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e117673528c9f8b419574b44bb712a2f
+      internalID: -521730982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1x atk_merged_7
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 192
+        width: 160
+        height: 64
+      alignment: 9
+      pivot: {x: 0.85, y: 0.47}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 893a9a6a26143414c9d8f83b3db1d242
+      internalID: 412756965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1x atk_merged_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 160
+        height: 64
+      alignment: 9
+      pivot: {x: 0.85, y: 0.47}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ef29318f72299744a33ad7f3ffb492e
+      internalID: 368504892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1x atk_merged_9
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 128
+        width: 160
+        height: 64
+      alignment: 9
+      pivot: {x: 0.85, y: 0.47}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eb66015d64f45e469cf2ec6c6c690c3
+      internalID: 2005423591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1x atk_merged_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 128
+        width: 160
+        height: 64
+      alignment: 9
+      pivot: {x: 0.85, y: 0.47}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23bea6c278964094292c8ee556e1c68b
+      internalID: 812909210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1x atk_merged_11
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 128
+        width: 160
+        height: 64
+      alignment: 9
+      pivot: {x: 0.85, y: 0.47}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd7b1fb806c2f4c4ebca28ea2396df8d
+      internalID: -730932792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1x atk_merged_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 160
+        height: 64
+      alignment: 9
+      pivot: {x: 0.85, y: 0.47}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f41b59ed660419d4e852590422cd7171
+      internalID: 1460388417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1x atk_merged_13
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 160
+        height: 64
+      alignment: 9
+      pivot: {x: 0.85, y: 0.47}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6afbebba984e804ab5190f5021ceda5
+      internalID: -319821453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1x atk_merged_14
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64
+        width: 160
+        height: 64
+      alignment: 9
+      pivot: {x: 0.85, y: 0.47}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25390a8645399bb4eb9128fc05bdf9fc
+      internalID: -1980728152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1x atk_merged_15
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 64
+        width: 160
+        height: 64
+      alignment: 9
+      pivot: {x: 0.85, y: 0.47}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a013009aa112b88448e25bfc11a01ffa
+      internalID: 314713373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1x atk_merged_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 160
+        height: 64
+      alignment: 9
+      pivot: {x: 0.85, y: 0.47}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04c943070c6be244680e20f9ea6ee0a0
+      internalID: -989331744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +476,24 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      1x atk_merged_0: -1865079683
+      1x atk_merged_1: 205371937
+      1x atk_merged_10: 812909210
+      1x atk_merged_11: -730932792
+      1x atk_merged_12: 1460388417
+      1x atk_merged_13: -319821453
+      1x atk_merged_14: -1980728152
+      1x atk_merged_15: 314713373
+      1x atk_merged_16: -989331744
+      1x atk_merged_2: -1166942846
+      1x atk_merged_3: 399910541
+      1x atk_merged_4: 1020493998
+      1x atk_merged_5: -1543077739
+      1x atk_merged_6: -521730982
+      1x atk_merged_7: 412756965
+      1x atk_merged_8: 368504892
+      1x atk_merged_9: 2005423591
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

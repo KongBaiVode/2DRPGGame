@@ -28,7 +28,7 @@ public class Player2GroundedState : Player2State
 
         //鼠标左键点击，进入攻击状态
         if(Input.GetKey(KeyCode.Mouse0))
-            stateMachine.ChangeState(player.primaryAttack);
+            stateMachine.ChangeState(player.basicAttackState);
 
         //检测不到地面，进入空中状态
         if(!player.groundDetected)

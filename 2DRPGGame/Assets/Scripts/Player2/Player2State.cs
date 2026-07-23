@@ -75,7 +75,7 @@ public abstract class Player2State
         animator.SetBool(animBoolName, false);
     }
 
-    public virtual void AnimationFinishTrigger()
+    public virtual void CallAnimationTrigger()
     {
         triggerCalled = true;
     }

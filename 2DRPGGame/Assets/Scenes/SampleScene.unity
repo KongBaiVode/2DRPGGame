@@ -1279,7 +1279,7 @@ Transform:
   m_GameObject: {fileID: 850084940}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.211, y: -0.013, z: 0.0023959174}
+  m_LocalPosition: {x: 1.83, y: -0.013, z: 0.0023959174}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5563,10 +5563,8 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 8
-  attackMovement:
-  - {x: 3, y: 1.5}
-  - {x: 1, y: 2.5}
-  - {x: 4, y: 1.5}
+  attackVelocity: {x: 3, y: 1.5}
+  attackVelocityDuration: 0.1
   counterAttackDuration: 0.2
   isBusy: 0
   moveSpeed: 8
@@ -5578,6 +5576,7 @@ MonoBehaviour:
   wallJumpForce: {x: 6, y: 12}
   dashSpeed: 25
   dashDuration: 0.2
+  dashDir: 0
 --- !u!1 &1799589165
 GameObject:
   m_ObjectHideFlags: 0

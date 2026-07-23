@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class Player2AnimationTriggers : MonoBehaviour
 {
-    private Player2 player => GetComponentInParent<Player2>();
+    private Player2 player;
 
-    private void AnimationTrigger()
+    void Awake()
     {
-        player.AnimationTrigger();
+        player = GetComponentInParent<Player2>();
+    }
+
+    private void CurrentStateTrigger()
+    {
+        player.CallAnimationTrigger();
     }
 
     private void AttackTrigger()
