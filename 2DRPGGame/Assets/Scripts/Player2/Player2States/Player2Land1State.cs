@@ -23,9 +23,14 @@ public class Player2Land1State : Player2State
     {
         base.Update();
 
+        //鼠标左键点击，进入攻击状态
+        if(Input.GetKey(KeyCode.Mouse0))
+            stateMachine.ChangeState(player.basicAttackState);
+
         //允许玩家用移动或再次跳跃来强制打断落地动画
         if(Input.GetKeyDown(KeyCode.Space))
             stateMachine.ChangeState(player.jump1State);
+
         if (xInput != 0) 
         { 
             stateMachine.ChangeState(player.runStartState); 

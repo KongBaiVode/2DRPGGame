@@ -5563,8 +5563,48 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 8
-  attackVelocity: {x: 3, y: 1.5}
-  attackVelocityDuration: 0.1
+  attackDatas:
+  - moveVelocity: {x: 4, y: 3}
+    moveDuration: 0.1
+    shapeType: 2
+    attackOffset: {x: 0.1, y: 0.1}
+    attackRadius: 0
+    attackSize: {x: 1.26, y: 4.5}
+    attackAngle: 97.2
+    damage: 0
+  - moveVelocity: {x: 8, y: 0}
+    moveDuration: 0.2
+    shapeType: 2
+    attackOffset: {x: -0.21, y: 0}
+    attackRadius: 0
+    attackSize: {x: 1, y: 4.2}
+    attackAngle: 90
+    damage: 0
+  - moveVelocity: {x: 0, y: 2}
+    moveDuration: 0.1
+    shapeType: 0
+    attackOffset: {x: -0.18, y: 0.41}
+    attackRadius: 1.15
+    attackSize: {x: 0, y: 0}
+    attackAngle: 0
+    damage: 0
+  - moveVelocity: {x: 4, y: 3}
+    moveDuration: 0.1
+    shapeType: 1
+    attackOffset: {x: -1.18, y: 0.38}
+    attackRadius: 0
+    attackSize: {x: 4.26, y: 0.86}
+    attackAngle: -22.32
+    damage: 0
+  - moveVelocity: {x: 10, y: 2}
+    moveDuration: 0.2
+    shapeType: 2
+    attackOffset: {x: -0.29, y: 0.2}
+    attackRadius: 0
+    attackSize: {x: 2.27, y: 4.63}
+    attackAngle: 90
+    damage: 0
+  comboResetTime: 1
   counterAttackDuration: 0.2
   isBusy: 0
   moveSpeed: 8

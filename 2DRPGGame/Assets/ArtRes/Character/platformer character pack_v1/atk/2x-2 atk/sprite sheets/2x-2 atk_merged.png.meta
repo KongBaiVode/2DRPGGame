@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -108,7 +108,217 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: 2x-2 atk_merged_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 225
+        width: 139
+        height: 75
+      alignment: 9
+      pivot: {x: 0.76, y: 0.39}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 607482bd12e7e5843bfa14c60664cddb
+      internalID: 804190768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2x-2 atk_merged_1
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 225
+        width: 139
+        height: 75
+      alignment: 9
+      pivot: {x: 0.78, y: 0.39}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e33bc02f686b5da44afe9d1cfdba5c20
+      internalID: 1369720171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2x-2 atk_merged_2
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 225
+        width: 139
+        height: 75
+      alignment: 9
+      pivot: {x: 0.65, y: 0.39}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d2c158b0ffc78448af86d20357a868d
+      internalID: 817320117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2x-2 atk_merged_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 150
+        width: 139
+        height: 75
+      alignment: 9
+      pivot: {x: 0.6, y: 0.39}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25a2b8cf33bb17e43b17ecaa5eecb882
+      internalID: 426140955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2x-2 atk_merged_4
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 150
+        width: 139
+        height: 75
+      alignment: 9
+      pivot: {x: 0.6, y: 0.39}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f141af53d993466498e080213f22faf2
+      internalID: -1071180352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2x-2 atk_merged_5
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 150
+        width: 139
+        height: 75
+      alignment: 9
+      pivot: {x: 0.6, y: 0.39}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39f097b2a571d8e4eaf5047ac955a810
+      internalID: 1817547175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2x-2 atk_merged_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 75
+        width: 139
+        height: 75
+      alignment: 9
+      pivot: {x: 0.6, y: 0.39}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfbd3762f9e46a74bb3202211362969e
+      internalID: 788444014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2x-2 atk_merged_7
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 75
+        width: 139
+        height: 75
+      alignment: 9
+      pivot: {x: 0.6, y: 0.39}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee8ca55a72cb67b4d8899cdb507f6bb8
+      internalID: -1534810443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2x-2 atk_merged_8
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 75
+        width: 139
+        height: 75
+      alignment: 9
+      pivot: {x: 0.6, y: 0.39}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ea97df3535b2754bb9aba7ce7480e1a
+      internalID: 814384106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2x-2 atk_merged_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 139
+        height: 75
+      alignment: 9
+      pivot: {x: 0.6, y: 0.39}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 836b8399ee37e0946adb69850e84435d
+      internalID: -560499496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +329,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      2x-2 atk_merged_0: 804190768
+      2x-2 atk_merged_1: 1369720171
+      2x-2 atk_merged_2: 817320117
+      2x-2 atk_merged_3: 426140955
+      2x-2 atk_merged_4: -1071180352
+      2x-2 atk_merged_5: 1817547175
+      2x-2 atk_merged_6: 788444014
+      2x-2 atk_merged_7: -1534810443
+      2x-2 atk_merged_8: 814384106
+      2x-2 atk_merged_9: -560499496
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

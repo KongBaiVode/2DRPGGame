@@ -14,7 +14,7 @@ public abstract class Player2State
     protected float xInput;
     protected float yInput;
     //动画状态机中控制状态的变量名
-    private string animBoolName;
+    protected string animBoolName;
 
     //状态计时器
     protected float stateTimer;
@@ -58,14 +58,7 @@ public abstract class Player2State
 
         //Dash状态应该可以从任何状态转换过来，所以在这里写检测Dash的输入
         if (Input.GetKeyDown(KeyCode.LeftShift) && CanDash())
-        {
-            player.dashDir = xInput;
-
-            if(xInput == 0)
-                player.dashDir = player.facingDir;
-            
             stateMachine.ChangeState(player.dashState);
-        }
     }
 
     //退出状态

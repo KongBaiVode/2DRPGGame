@@ -6,6 +6,7 @@ public class Player2DashState : Player2State
 {
     //玩家原始的重力缩放
     private float originalGravityScale;
+    private int dashDir;
 
     public Player2DashState(Player2 _player, Player2StateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
     {
@@ -18,6 +19,8 @@ public class Player2DashState : Player2State
         //克隆一个分身，在Dash时的位置处
         //SkillManager.Instance.clone.CreateClone(player.transform);
         //player.skill.clone.CreateClone(player.transform);
+
+        dashDir = xInput != 0 ? ((int)xInput) : player.facingDir;
 
         stateTimer = player.dashDuration;
 
@@ -41,8 +44,8 @@ public class Player2DashState : Player2State
 
         CancelDashIfNeeded();
 
-        player.SetVelocity(player.dashSpeed * player.dashDir, 0);
-        player.HandleFlip(player.dashDir);
+        player.SetVelocity(player.dashSpeed * dashDir, 0);
+        player.HandleFlip(dashDir);
 
         if(stateTimer < 0)
         {
